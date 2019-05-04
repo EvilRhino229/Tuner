@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TunerApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <!-- <script type="text/javascript" src="../../../tuner.js" /> -->
+    <!-- <meta http-equiv="Access-Control-Allow-Origin" content="*"> -->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <a class="navbar-brand" href="/">Tunar 2: Electric Boogaloo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">E Standard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Eb">Eb Standard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#D">D Standard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#C#">C# Standard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#C">C Standard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#dD">Drop D <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#dDb">Eb Drop Db <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#dC">D Drop C <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class=nav-link href=about><strike>aboat</strike> About<span class=sr-only>(current)</span></a>
+      </li>
+      <li class=nav-item>
+        <a class=nav-link href=record>Record</a>
+      </li>
+  </div>
+</nav>
+    <%= yield %>
+  </body>
+</html>

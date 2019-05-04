@@ -1,0 +1,38 @@
+body {
+  background-image: url(https://www.anglersjournal.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTQ2OTAxMTA0NjYwNzE5NDE0/yellowfin-tuna.jpg);
+  background-color: navy;
+  background-size: cover;
+}
+
+.ascii {
+  color: red;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 4em;
+  white-space: pre;
+}
+
+h1 {
+  color: yellow;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 4em;
+  padding-top: 1em;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: red;
+}
+body :focus {
+  border: none;
+}
+
+p {
+  color: yellow;
+  text-align: center;
+  font-family: Comic Sans MS;
+  padding-right: 3em; padding-left: 3em;
+}
