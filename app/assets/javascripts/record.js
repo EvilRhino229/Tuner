@@ -11,7 +11,7 @@ $(document).ready(function() {
     rec.ondataavailable = e => {
       audioChunks.push(e.data);
       if (rec.state === "inactive") {
-        var blob = new Blob(audioChunks, {type: 'audio/mpeg-3'});
+        var blob = new Blob(audioChunks, {type: 'audio/wav'});
         $recordedAudio.prop("src", URL.createObjectURL(blob));
         $recordedAudio.prop("controls", true);
         $recordedAudio.prop("autoplay", true);
