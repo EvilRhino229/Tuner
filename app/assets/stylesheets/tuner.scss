@@ -12,6 +12,13 @@ body {
   white-space: pre;
 }
 
+.ERB {
+  color: red;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 5em;
+}
+
 h1 {
   color: yellow;
   text-align: center;
@@ -26,7 +33,7 @@ button {
   border: none;
   color: red;
 }
-body :focus {
+body:focus {
   border: none;
 }
 
@@ -35,4 +42,9 @@ p {
   text-align: center;
   font-family: Comic Sans MS;
   padding-right: 3em; padding-left: 3em;
+}
+
+button:focus {
+  outline: none;
+  border: none;
 }

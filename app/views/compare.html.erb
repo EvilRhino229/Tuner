@@ -1,0 +1,11 @@
+<div class=ERB>
+  <%= context1 = Chromaprint::Context.new(44100, 1)
+  data1 = File.binread('B2.wav')
+  fingerprint1 = context1.get_fingerprint(data1)
+
+  context2     = Chromaprint::Context.new(44100, 1)
+  data2 = File.binread('B2_copy_correct.wav')
+  fingerprint2 = context2.get_fingerprint(data2)
+
+  p fingerprint1.compare(fingerprint2) %>
+</div>

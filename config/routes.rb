@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/home' => 'tuner#home'
   get '/about' => 'tuner#about'
   get '/record' => 'tuner#record'
+  get '/compare' => 'tuner#compare'
 end

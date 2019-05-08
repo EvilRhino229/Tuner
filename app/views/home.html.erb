@@ -2,15 +2,28 @@
 
   <div class="ascii">
   ____
-<button data-audio-url="https://www.dropbox.com/home/audio?preview=D4.wav" class=audio-btn>q<audio type="audio/mpeg" id="string_4"></audio></button> o o <button data-audio-url="https://www.dropbox.com/home/audio?preview=G3.wav" class=audio-btn>p</button><audio type="audio/mpeg" id="string_3"></audio>
-<button data-audio-url="https://www.dropbox.com/home/audio?preview=A5.wav" class=audio-btn>q</button><audio type="audio/mpeg" id="string_5"></audio> o!o </button><button data-audio-url="https://salty-reaches-44269.herokuapp.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0eaa076a91e194c0db895307e15791152fffe909/B2.wav" class=audio-btn>p</button><audio type="audio/mpeg" id="string_2"></audio>
-<button data-audio-url="https://www.dropbox.com/home/audio?preview=E6.wav" class=audio-btn>d</button><audio type="audio/mpeg" id="string_6"></audio> o!o </button><button data-audio-url="https://www.dropbox.com/home/audio?preview=e1.wav" class=audio-btn>b</button><audio type="audio/mpeg" id="string_1"></audio>
+<button data-audio-url="D4.wav" class=audio-btn>q<audio type="audio/mpeg" id="string_4"></audio></button> o o <button data-audio-url="G3.wav" class=audio-btn>p</button><audio type="audio/mpeg" id="string_3"></audio>
+<button data-audio-url="A5.wav" class=audio-btn>q</button><audio type="audio/mpeg" id="string_5"></audio> o!o </button><button data-audio-url="https://salty-reaches-44269.herokuapp.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0eaa076a91e194c0db895307e15791152fffe909/B2.wav" class=audio-btn>p</button><audio type="audio/mpeg" id="string_2"></audio>
+<button data-audio-url="E6.wav" class=audio-btn>d</button><audio type="audio/mpeg" id="string_6"></audio> o!o </button><button data-audio-url="e1.wav" class=audio-btn>b</button><audio type="audio/mpeg" id="string_1"></audio>
 \!!!!!!!/
 |===|
 |!!!!!!|
 |!!!!!!|
 |!!!!!!|
-  </div> 
+  </div>
+
+
+<div class=ERB>
+  <%= context1 = Chromaprint::Context.new(44100, 1)
+  data1 = File.binread('B2.wav')
+  fingerprint1 = context1.get_fingerprint(data1)
+
+  context2     = Chromaprint::Context.new(44100, 1)
+  data2 = File.binread('B2_copy_correct.wav')
+  fingerprint2 = context2.get_fingerprint(data2)
+
+  p fingerprint1.compare(fingerprint2) %>
+</div>
 
 
 

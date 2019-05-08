@@ -68,6 +68,8 @@ GEM
       xpath (~> 3.2)
     childprocess (1.0.1)
       rake (< 13.0)
+    chromaprint (0.0.2)
+      ffi
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
@@ -215,6 +217,7 @@ DEPENDENCIES
   bootstrap (~> 4.3.1)
   byebug
   capybara (>= 2.15)
+  chromaprint
   chromedriver-helper
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
