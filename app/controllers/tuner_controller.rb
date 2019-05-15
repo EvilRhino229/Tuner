@@ -10,7 +10,6 @@ class TunerController < ApplicationController
   def record
     params.permit(:audio)
     render '/record'
-    @guitar_string.audio.attach(params[:audio])
   end
 
   def compare
