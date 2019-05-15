@@ -33,18 +33,10 @@ button {
   border: none;
   color: red;
 }
-body:focus {
-  border: none;
-}
 
 p {
   color: yellow;
   text-align: center;
   font-family: Comic Sans MS;
   padding-right: 3em; padding-left: 3em;
-}
-
-button:focus {
-  outline: none;
-  border: none;
 }

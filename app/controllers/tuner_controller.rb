@@ -4,11 +4,11 @@ class TunerController < ApplicationController
   end
 
   def audio
-    
+    audio = @guitar_string.audio
   end
 
   def record
-    params.require(:guitar_string).permit(:audio)
+    params.permit(:audio)
     render '/record'
     @guitar_string.audio.attach(params[:audio])
   end
