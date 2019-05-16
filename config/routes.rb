@@ -4,4 +4,12 @@ Rails.application.routes.draw do
   get '/about' => 'tuner#about'
   get '/record' => 'tuner#record'
   get '/compare' => 'tuner#compare'
+  get '/Eb' => 'tuner#error'
+  get '/D' => 'tuner#error'
+  get '/C#' => 'tuner#error'
+  get '/C' => 'tuner#error'
+  get '/dD' => 'tuner#error'
+  get '/dDb' => 'tuner#error'
+  get '/dC' => 'tuner#error'
+  post '/compare_audio' => 'application#compare'
 end
