@@ -1,11 +1,27 @@
 <div class=ERB>
   <% context1 = Chromaprint::Context.new(44100, 1)
-  data1 = File.binread('B2.wav')
+  data1 = File.binread('B2-+2.wav')
   fingerprint1 = context1.get_fingerprint(data1)
 
   context2     = Chromaprint::Context.new(44100, 1)
-  data2 = File.binread('B2--1.wav')
-  fingerprint2 = context2.get_fingerprint(data2) %>
+  data2 = File.binread('B2-+1.wav')
+  fingerprint2 = context2.get_fingerprint(data2) 
 
-  <%= fingerprint1.compare(fingerprint2) %>
+  context3 = Chromaprint::Context.new(44100, 1)
+  data3 = File.binread('B2.wav')
+  fingerprint3 = context3.get_fingerprint(data3) 
+
+  context4 = Chromaprint::Context.new(44100, 1)
+  data4 = File.binread('B2--1.wav')
+  fingerprint4 = context4.get_fingerprint(data4) 
+
+  context5 = Chromaprint::Context.new(44100, 1)
+  data5 = File.binread('B2--2.wav')
+  fingerprint5 = context5.get_fingerprint(data5) %>
+
+  <%= fingerprint3.compare(fingerprint1).round(2)*100 %>
+  <%= fingerprint3.compare(fingerprint2).round(2)*100 %>
+  <%= fingerprint3.compare(fingerprint3).round(2)*100 %>
+  <%= fingerprint3.compare(fingerprint4).round(2)*100 %>
+  <%= fingerprint3.compare(fingerprint5).round(2)*100 %>
 </div>
